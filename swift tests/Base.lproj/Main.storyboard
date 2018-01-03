@@ -1,39 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q3G-re-CWp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="UXA-vn-BN6">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_tests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Q3G-re-CWp" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="yuv-9E-RQt"/>
+                        <viewControllerLayoutGuide type="bottom" id="QVu-rm-oge"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="rgu-rJ-xNg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5y4-gy-TJ1">
-                                <rect key="frame" x="150" y="313" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter login details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuj-n7-5yT">
+                                <rect key="frame" x="117" y="238" width="141" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6C2-Xi-Qm0">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPD-9J-ZeG">
+                                <rect key="frame" x="16" y="356" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vck-X1-sKh">
+                                <rect key="frame" x="168" y="409" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6C2-Xi-Qm0" firstAttribute="centerY" secondItem="rgu-rJ-xNg" secondAttribute="centerY" id="0qK-TR-zGy"/>
+                            <constraint firstItem="Vck-X1-sKh" firstAttribute="top" secondItem="NPD-9J-ZeG" secondAttribute="bottom" constant="23" id="BjL-cU-nHv"/>
+                            <constraint firstItem="NPD-9J-ZeG" firstAttribute="top" secondItem="6C2-Xi-Qm0" secondAttribute="bottom" constant="7.5" id="M9m-66-wwX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6C2-Xi-Qm0" secondAttribute="trailing" id="STa-7Z-zbe"/>
+                            <constraint firstItem="6C2-Xi-Qm0" firstAttribute="top" secondItem="yuj-n7-5yT" secondAttribute="bottom" constant="59.5" id="Sdq-2u-ZLp"/>
+                            <constraint firstItem="6C2-Xi-Qm0" firstAttribute="centerX" secondItem="rgu-rJ-xNg" secondAttribute="centerX" id="XsK-2k-b0o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NPD-9J-ZeG" secondAttribute="trailing" id="Zhm-oT-yMt"/>
+                            <constraint firstItem="NPD-9J-ZeG" firstAttribute="centerX" secondItem="rgu-rJ-xNg" secondAttribute="centerX" id="cZL-mX-7Fw"/>
+                            <constraint firstItem="6C2-Xi-Qm0" firstAttribute="leading" secondItem="rgu-rJ-xNg" secondAttribute="leadingMargin" id="jjf-hF-ZaT"/>
+                            <constraint firstItem="yuj-n7-5yT" firstAttribute="centerX" secondItem="rgu-rJ-xNg" secondAttribute="centerX" id="lda-09-wbA"/>
+                            <constraint firstItem="Vck-X1-sKh" firstAttribute="centerX" secondItem="rgu-rJ-xNg" secondAttribute="centerX" id="mBQ-Jb-rLP"/>
+                            <constraint firstItem="NPD-9J-ZeG" firstAttribute="leading" secondItem="rgu-rJ-xNg" secondAttribute="leadingMargin" id="siB-4f-u2I"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Qg-w1-Elz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="485.60000000000002" y="-56.221889055472268"/>
         </scene>
     </scenes>
 </document>
